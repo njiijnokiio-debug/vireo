@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
-  <rect width="200" height="60" fill="#f0efeb" rx="4"/>
-  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" font-weight="300" fill="#333333" text-anchor="middle" dominant-baseline="middle">VIREO</text>
-  <circle cx="132" cy="30" r="6" fill="#5EC4B6"/>
-  <path d="M128 34 Q132 26 136 34" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-</svg>
