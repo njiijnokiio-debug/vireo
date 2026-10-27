@@ -21,6 +21,4 @@
     <line x1="388" y1="318" x2="406" y2="318"/>
     <circle cx="400" cy="366" r="9" fill="#5EC4B6" fill-opacity=".8" stroke="none"/>
   </g>
-  <text x="40" y="552" font-family="Jost, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#8A857B">VIREO</text>
-  <text x="40" y="572" font-family="Inter, Arial, sans-serif" font-size="11" letter-spacing=".5" fill="#A9A399">изображение будет добавлено</text>
 </svg>
