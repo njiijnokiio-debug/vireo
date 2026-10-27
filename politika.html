@@ -2,147 +2,128 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Политика конфиденциальности — VIREO</title>
-  <meta name="description" content="Политика обработки персональных данных компании VIREO. Аппараты и препараты для фотодинамической терапии.">
+  <meta name="description" content="Политика обработки персональных данных сайта VIREO. Аппараты и препараты для фотодинамической терапии.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='16' font-size='24'%3E🌿%3C/text%3E%3C/svg%3E">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
 
-  <!-- Yandex Metrika placeholder -->
-  <!-- Yandex.Metrika counter -->
-  <!-- /Yandex.Metrika counter -->
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    <div class="container">
-      <div class="cookie-text">
-        Мы используем cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="politika.html">политикой конфиденциальности</a>.
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Принять</button>
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Отклонить</button>
-      </div>
+  <div class="cookie" id="cookieBanner" role="dialog" aria-label="Использование cookie">
+    <p>Мы используем cookie, чтобы сайт работал удобнее. Подробнее — в <a href="politika.html">политике конфиденциальности</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn--sm btn--light" data-cookie="accept">Принять</button>
+      <button class="btn btn--sm btn--outline-light" data-cookie="decline">Отклонить</button>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.jpg" alt="VIREO логотип" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\"logo-text\">VIREO<span>™</span></span>'">
-      </a>
-
-      <nav class="nav">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="VIREO — на главную"><img src="img/logo.jpg" alt="VIREO"></a>
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
         <a href="apparaty.html">Аппараты</a>
         <a href="o-kompanii.html">О компании</a>
         <a href="instruktsii.html">Инструкции</a>
         <a href="preparaty.html">Препараты</a>
         <a href="kontakty.html">Контакты</a>
       </nav>
-
-      <a href="kontakty.html" class="btn-contact">Связаться</a>
-
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="header-cta" href="kontakty.html">Связаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs">
-    <div class="container">
-      <ol>
-        <li><a href="index.html">Главная</a></li>
-        <li><span>Политика конфиденциальности</span></li>
-      </ol>
-    </div>
-  </nav>
-
-  <section class="page-header">
-    <div class="container">
-      <h1>Политика конфиденциальности</h1>
-      <p class="subtitle">Обработка персональных данных пользователей сайта VIREO</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="policy-content fade-in">
-        <h2>Общие положения</h2>
-        <p>Настоящая политика конфиденциальности составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных пользователей сайта VIREO.</p>
-
-        <h2>1. Понятия, используемые в политике</h2>
-        <ul>
-          <li><strong>Персональные данные</strong> — любая информация, относящаяся к физическому лицу.</li>
-          <li><strong>Обработка персональных данных</strong> — любое действие с персональными данными.</li>
-          <li><strong>Оператор</strong> — компания VIREO, определяющая цели обработки персональных данных.</li>
-        </ul>
-
-        <h2>2. Цели обработки персональных данных</h2>
-        <p>Оператор обрабатывает персональные данные для следующих целей:</p>
-        <ul>
-          <li>Обработка заявок на обратную связь и консультации;</li>
-          <li>Отправка информационных материалов о продукции VIREO;</li>
-          <li>Организация поставок аппаратов и препаратов по всей России;</li>
-          <li>Улучшение качества сайта и обслуживания клиентов.</li>
-        </ul>
-
-        <h2>3. Какие персональные данные обрабатываются</h2>
-        <ul>
-          <li>Фамилия, имя, отчество;</li>
-          <li>Номер телефона;</li>
-          <li>Адрес электронной почты;</li>
-          <li>Текст сообщения из формы обратной связи.</li>
-        </ul>
-
-        <h2>4. Источники персональных данных</h2>
-        <p>Персональные данные поступают от пользователей сайта посредством заполнения форм обратной связи, отправки электронных писем и телефонных звонков.</p>
-
-        <h2>5. Способы и сроки обработки</h2>
-        <p>Обработка персональных данных осуществляется с использованием автоматизированных средств и без их использования. Срок обработки определяется необходимостью достижения целей, для которых были собраны персональные данные.</p>
-
-        <h2>6. Права субъектов персональных данных</h2>
-        <ul>
-          <li>Право на получение информации о Processing своих персональных данных;</li>
-          <li>Право на уточнение, блокирование или уничтожение персональных данных;</li>
-          <li>Право на отзыв согласия на обработку персональных данных.</li>
-        </ul>
-
-        <h2>7. Конфиденциальность и защита данных</h2>
-        <p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа, распространения, изменения или уничтожения.</p>
-
-        <h2>8. Обратная связь</h2>
-        <p>По вопросам обработки персональных данных вы можете обращаться:</p>
-        <ul>
-          <li>E-mail: <a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
-          <li>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
-          <li>Адрес: г. Москва, ул. Примерная, д. 1</li>
-        </ul>
-
-        <p style="margin-top:32px; font-size:14px; color:#888;">
-          Политика вступает в силу с момента опубликования на сайте. Оператор оставляет за собой право вносить изменения в настоящую политику.
-        </p>
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Главная</a></li>
+          <li aria-current="page">Политика конфиденциальности</li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-col">
-        <div class="footer-logo">VIREO<span style="color:#5EC4B6;">™</span></div>
-        <div class="footer-desc">
-          Аппараты и препараты для фотодинамической терапии. Москва, работаем по всей России.<br>
-          Цены не указываются — только информация и фотографии.
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow reveal">Документы</p>
+        <h1 class="reveal">Политика конфиденциальности</h1>
+        <p class="lead reveal">Обработка персональных данных пользователей сайта VIREO.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="prose reveal">
+          <h2>Общие положения</h2>
+          <p>Настоящая политика конфиденциальности составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных пользователей сайта VIREO.</p>
+
+          <h2>1. Понятия</h2>
+          <ul>
+            <li><strong>Персональные данные</strong> — любая информация, относящаяся к физическому лицу.</li>
+            <li><strong>Обработка персональных данных</strong> — любое действие с персональными данными.</li>
+            <li><strong>Оператор</strong> — компания VIREO, определяющая цели обработки персональных данных.</li>
+          </ul>
+
+          <h2>2. Цели обработки</h2>
+          <p>Оператор обрабатывает персональные данные для следующих целей:</p>
+          <ul>
+            <li>обработка обращений и консультаций;</li>
+            <li>отправка информационных материалов о продукции VIREO;</li>
+            <li>организация поставок аппаратов и препаратов по всей России;</li>
+            <li>улучшение качества сайта и обслуживания клиентов.</li>
+          </ul>
+
+          <h2>3. Какие данные обрабатываются</h2>
+          <ul>
+            <li>фамилия, имя, отчество;</li>
+            <li>номер телефона;</li>
+            <li>адрес электронной почты;</li>
+            <li>текст сообщения.</li>
+          </ul>
+
+          <h2>4. Источники данных</h2>
+          <p>Персональные данные поступают от пользователей при отправке электронных писем и телефонных звонках.</p>
+
+          <h2>5. Способы и сроки обработки</h2>
+          <p>Обработка осуществляется с использованием автоматизированных средств и без них. Срок обработки определяется необходимостью достижения целей, для которых были собраны данные.</p>
+
+          <h2>6. Права субъектов данных</h2>
+          <ul>
+            <li>право на получение информации об обработке своих данных;</li>
+            <li>право на уточнение, блокирование или уничтожение данных;</li>
+            <li>право на отзыв согласия на обработку.</li>
+          </ul>
+
+          <h2>7. Защита данных</h2>
+          <p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа, распространения, изменения или уничтожения.</p>
+
+          <h2>8. Обратная связь</h2>
+          <p>По вопросам обработки персональных данных вы можете обратиться:</p>
+          <ul>
+            <li>E-mail: <a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
+            <li>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+            <li>Адрес: г. Москва, ул. Примерная, д. 1</li>
+          </ul>
+
+          <p style="margin-top:28px;color:var(--muted);font-size:13.5px">Политика вступает в силу с момента опубликования на сайте. Оператор вправе вносить изменения в настоящую политику.</p>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="footer-wordmark" href="index.html">VIREO<sup>™</sup></a>
+        <p>Аппараты и препараты для фотодинамической терапии. Москва — вся Россия. Без цен: только информация и фотографии.</p>
+      </div>
       <div class="footer-col">
-        <h4>разделы</h4>
+        <h4>Разделы</h4>
         <ul>
-          <li><a href="index.html">Главная</a></li>
           <li><a href="apparaty.html">Аппараты</a></li>
           <li><a href="preparaty.html">Препараты</a></li>
           <li><a href="instruktsii.html">Инструкции</a></li>
@@ -151,41 +132,28 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>контакты</h4>
+        <h4>Контакты</h4>
         <ul>
           <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
           <li><a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
-          <li>г. Москва, работаем по всей России</li>
+          <li>Москва, работаем по всей России</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>соцсети</h4>
+        <h4>Соцсети</h4>
         <ul>
           <li><a href="https://www.instagram.com/fdt_vireo" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://t.me/+DcnB9CETJRs0MjUy" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="politika.html">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <span>© 2026 VIREO. Аппараты и препараты для ФДТ.</span>
-      <a href="politika.html" class="policy-link">Политика конфиденциальности</a>
+      <span>Информация на сайте не является публичной офертой.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('cookieAccept')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    document.getElementById('cookieDecline')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    if (localStorage.getItem('vireo_cookie_accepted')) {
-      document.querySelector('.cookie-banner').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
-

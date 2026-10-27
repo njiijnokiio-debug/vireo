@@ -2,142 +2,144 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>О компании VIREO</title>
-  <meta name="description" content="О компании VIREO — аппараты и препараты для фотодинамической терапии. Миссия, эксперт доктор Карпова, преимущества. Москва, работаем по всей России.">
+  <meta name="description" content="О компании VIREO: аппараты и препараты для фотодинамической терапии. Миссия, экспертиза доктора Карповой, преимущества. Москва — вся Россия.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='16' font-size='24'%3E🌿%3C/text%3E%3C/svg%3E">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
 
-  <!-- Yandex Metrika placeholder -->
-  <!-- Yandex.Metrika counter -->
-  <!-- /Yandex.Metrika counter -->
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    <div class="container">
-      <div class="cookie-text">
-        Мы используем cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="politika.html">политикой конфиденциальности</a>.
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Принять</button>
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Отклонить</button>
-      </div>
+  <div class="cookie" id="cookieBanner" role="dialog" aria-label="Использование cookie">
+    <p>Мы используем cookie, чтобы сайт работал удобнее. Подробнее — в <a href="politika.html">политике конфиденциальности</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn--sm btn--light" data-cookie="accept">Принять</button>
+      <button class="btn btn--sm btn--outline-light" data-cookie="decline">Отклонить</button>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.jpg" alt="VIREO логотип" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\"logo-text\">VIREO<span>™</span></span>'">
-      </a>
-
-      <nav class="nav">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="VIREO — на главную"><img src="img/logo.jpg" alt="VIREO"></a>
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
         <a href="apparaty.html">Аппараты</a>
-        <a href="o-kompanii.html" style="color:#5EC4B6;">О компании</a>
+        <a href="o-kompanii.html" class="is-active">О компании</a>
         <a href="instruktsii.html">Инструкции</a>
         <a href="preparaty.html">Препараты</a>
         <a href="kontakty.html">Контакты</a>
       </nav>
-
-      <a href="kontakty.html" class="btn-contact">Связаться</a>
-
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="header-cta" href="kontakty.html">Связаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs">
-    <div class="container">
-      <ol>
-        <li><a href="index.html">Главная</a></li>
-        <li><span>О компании</span></li>
-      </ol>
-    </div>
-  </nav>
-
-  <section class="page-header">
-    <div class="container">
-      <h1>О компании VIREO</h1>
-      <p class="subtitle">Мы разрабатываем аппараты и препараты для фотодинамической терапии. Безопасность, доказательность, простота.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="about-hero fade-in">
-        <h2>Кто мы и чем занимаемся</h2>
-        <p>VIREO — российский бренд оборудования и препаратов для фотодинамической терапии. Мы создаём решения для врачей и косметологов, которые работают с кожей и хотят использовать проверенные методы ФДТ. Офис в Москве, поставки и сотрудничество по всей России.</p>
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Главная</a></li>
+          <li aria-current="page">О компании</li>
+        </ol>
       </div>
+    </nav>
 
-      <div class="about-grid">
-        <div class="about-text fade-in" style="animation-delay:0.1s;">
-          <h3>миссия и подход</h3>
-          <p>Наша миссия — сделать фотодинамическую терапию доступной, безопасной и понятной для специалистов по всей России.</p>
-          <p>Мы придерживаемся трёх принципов:</p>
-          <ul style="list-style:disc; padding-left:20px; color:#333; line-height:1.7; margin-top:16px;">
-            <li><strong>Безопасность.</strong> Все аппараты и препараты проходят проверку перед выпуском.</li>
-            <li><strong>Доказательность.</strong> Методы основаны на клинических исследованиях и опыте специалистов.</li>
-            <li><strong>Простота использования.</strong> Оборудование легко освоить, препараты удобны в применении.</li>
-          </ul>
-        </div>
-        <div class="expert-card fade-in" style="animation-delay:0.2s;">
-          <img src="img/expert-placeholder.svg" alt="Доктор Карпова" onerror="this.parentElement.innerHTML='<div style=\"width:160px;height:160px;background:#f0efeb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#888;font-size:14px;\">Фото доктора Карповой скоро будет добавлено</div>'">
-          <div class="expert-card-info">
+    <section class="page-head">
+      <div class="container about-hero">
+        <p class="eyebrow reveal">Бренд</p>
+        <h1 class="reveal">О компании VIREO</h1>
+        <p class="lead reveal">Разрабатываем аппараты и препараты для фотодинамической терапии. Безопасность, доказательность, простота использования.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <p class="eyebrow reveal">Кто мы</p>
+            <h2 class="reveal" style="margin-top:14px;font-size:clamp(1.8rem,3.6vw,2.6rem)">Оборудование и препараты для специалистов</h2>
+            <p class="lead reveal" style="margin-top:18px">
+              VIREO — российский бренд оборудования и препаратов для фотодинамической терапии.
+              Мы создаём решения для врачей и косметологов, которые работают с кожей и хотят
+              использовать проверенные методы ФДТ. Офис в Москве, поставки и сотрудничество
+              по всей России.
+            </p>
+
+            <ol class="principles">
+              <li class="reveal">
+                <span class="num">01</span>
+                <div>
+                  <h3>безопасность</h3>
+                  <p>Все аппараты и препараты проходят проверку перед выпуском.</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="num">02</span>
+                <div>
+                  <h3>доказательность</h3>
+                  <p>Методы основаны на клинических исследованиях и опыте специалистов.</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="num">03</span>
+                <div>
+                  <h3>простота использования</h3>
+                  <p>Оборудование легко освоить, препараты удобны в применении.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <aside class="expert-card reveal">
+            <img src="img/expert-placeholder.svg" alt="Доктор Карпова — эксперт VIREO" loading="lazy">
             <h3>Доктор Карпова</h3>
-            <p>Врач-дерматолог, косметолог. Эксперт в области фотодинамической терапии. Принимала участие в разработке линейки препаратов VIREO и консультирует специалистов по выбору оборудования и методикам проведения процедур.</p>
+            <p>Врач-дерматолог и косметолог, эксперт в области фотодинамической терапии. Принимала участие в разработке линейки препаратов VIREO и консультирует специалистов по выбору оборудования и методикам процедур.</p>
+            <div class="expert-meta">
+              <span class="chip">Врач-дерматолог</span>
+              <span class="chip">Косметолог</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="advantages">
+          <div class="advantage reveal">
+            <span class="advantage-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>безопасность и качество</h3>
+            <p>Каждый прибор и каждый препарат проверяются перед выходом на рынок.</p>
+          </div>
+          <div class="advantage reveal">
+            <span class="advantage-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M4 7h16"/><path d="M6 7c0 4 2.7 6 6 6s6-2 6-6"/><path d="M6 17c0-4 2.7-6 6-6s6 2 6 6"/></svg></span>
+            <h3>российская разработка</h3>
+            <p>Оборудование и препараты созданы с учётом потребностей российских клиник.</p>
+          </div>
+          <div class="advantage reveal">
+            <span class="advantage-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></span>
+            <h3>поддержка специалистов</h3>
+            <p>Консультации, инструкции и обучение для врачей и косметологов по всей России.</p>
           </div>
         </div>
-      </div>
 
-      <div class="advantages">
-        <div class="advantage fade-in" style="animation-delay:0.3s;">
-          <div class="advantage-icon" style="color:#5EC4B6;">🌿</div>
-          <h4>российская разработка</h4>
-          <p>Оборудование и препараты созданы с учётом потребностей российских клиник и салонов.</p>
-        </div>
-        <div class="advantage fade-in" style="animation-delay:0.4s;">
-          <div class="advantage-icon" style="color:#5EC4B6;">✓</div>
-          <h4>безопасность и качество</h4>
-          <p>Каждый прибор и каждый препарат проверяются перед выходом на рынок.</p>
-        </div>
-        <div class="advantage fade-in" style="animation-delay:0.5s;">
-          <div class="advantage-icon" style="color:#5EC4B6;">⚡</div>
-          <h4>поддержка специалистов</h4>
-          <p>Консультации, инструкции и обучение для врачей и косметологов по всей России.</p>
+        <div class="cta-row reveal">
+          <a class="btn btn--dark" href="apparaty.html">Аппараты</a>
+          <a class="btn btn--ghost" href="preparaty.html">Препараты</a>
+          <a class="btn btn--accent" href="kontakty.html">Связаться</a>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="about-cta fade-in" style="animation-delay:0.6s;">
-        <h3>связаться с нами</h3>
-        <div class="cta-buttons">
-          <a href="apparaty.html" class="btn-outline">Аппараты</a>
-          <a href="preparaty.html" class="btn-outline">Препараты</a>
-          <a href="kontakty.html" class="btn-turquoise">Связаться</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-col">
-        <div class="footer-logo">VIREO<span style="color:#5EC4B6;">™</span></div>
-        <div class="footer-desc">
-          Аппараты и препараты для фотодинамической терапии. Москва, работаем по всей России.<br>
-          Цены не указываются — только информация и фотографии.
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="footer-wordmark" href="index.html">VIREO<sup>™</sup></a>
+        <p>Аппараты и препараты для фотодинамической терапии. Москва — вся Россия. Без цен: только информация и фотографии.</p>
       </div>
       <div class="footer-col">
-        <h4>разделы</h4>
+        <h4>Разделы</h4>
         <ul>
-          <li><a href="index.html">Главная</a></li>
           <li><a href="apparaty.html">Аппараты</a></li>
           <li><a href="preparaty.html">Препараты</a></li>
           <li><a href="instruktsii.html">Инструкции</a></li>
@@ -146,41 +148,28 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>контакты</h4>
+        <h4>Контакты</h4>
         <ul>
           <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
           <li><a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
-          <li>г. Москва, работаем по всей России</li>
+          <li>Москва, работаем по всей России</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>соцсети</h4>
+        <h4>Соцсети</h4>
         <ul>
           <li><a href="https://www.instagram.com/fdt_vireo" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://t.me/+DcnB9CETJRs0MjUy" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="politika.html">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <span>© 2026 VIREO. Аппараты и препараты для ФДТ.</span>
-      <a href="politika.html" class="policy-link">Политика конфиденциальности</a>
+      <span>Информация на сайте не является публичной офертой.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('cookieAccept')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    document.getElementById('cookieDecline')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    if (localStorage.getItem('vireo_cookie_accepted')) {
-      document.querySelector('.cookie-banner').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
-

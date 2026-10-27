@@ -1,8 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#f0efeb" rx="8"/>
-  <rect x="130" y="90" width="140" height="120" fill="#e0ded8" rx="8" stroke="#d3d2cb" stroke-width="2"/>
-  <rect x="160" y="120" width="80" height="30" fill="#d3d2cb" rx="4"/>
-  <circle cx="200" cy="180" r="20" fill="#5EC4B6" opacity="0.6"/>
-  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">VIREO Wave Duo</text>
-  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3F1EB"/>
+      <stop offset="1" stop-color="#E7E3D9"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="45%" r="52%">
+      <stop offset="0" stop-color="#5EC4B6" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#5EC4B6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <circle cx="400" cy="290" r="238" fill="url(#glow2)"/>
+  <circle cx="400" cy="290" r="188" fill="none" stroke="#2E9C8D" stroke-opacity=".15"/>
+  <g stroke="#2E9C8D" stroke-width="3" fill="#FFFFFF" fill-opacity=".6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="228" y="205" width="344" height="138" rx="20"/>
+    <circle cx="318" cy="274" r="32"/>
+    <circle cx="482" cy="274" r="32"/>
+    <circle cx="318" cy="274" r="10" fill="#5EC4B6" fill-opacity=".8" stroke="none"/>
+    <circle cx="482" cy="274" r="10" fill="#5EC4B6" fill-opacity=".8" stroke="none"/>
+    <rect x="376" y="252" width="48" height="44" rx="8" fill="#F1EEE7" fill-opacity=".9"/>
+    <path d="M228 312h-34v58h34" fill="none"/>
+    <path d="M572 312h34v58h-34" fill="none"/>
+    <path d="M270 343v50h260v-50" fill="none"/>
+    <circle cx="400" cy="230" r="4" fill="#5EC4B6" stroke="none"/>
+  </g>
+  <text x="40" y="552" font-family="Jost, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#8A857B">VIREO</text>
+  <text x="40" y="572" font-family="Inter, Arial, sans-serif" font-size="11" letter-spacing=".5" fill="#A9A399">изображение будет добавлено</text>
 </svg>

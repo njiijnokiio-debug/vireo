@@ -2,157 +2,143 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Инструкции — VIREO</title>
-  <meta name="description" content="Инструкции по аппаратам и препаратам VIREO для скачивания. PDF документы. Поиск по названию. Москва, работаем по всей России.">
+  <meta name="description" content="Инструкции по аппаратам и препаратам VIREO в формате PDF. Поиск по названию и скачивание документов. Москва, работаем по всей России.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='16' font-size='24'%3E🌿%3C/text%3E%3C/svg%3E">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
 
-  <!-- Yandex Metrika placeholder -->
-  <!-- Yandex.Metrika counter -->
-  <!-- /Yandex.Metrika counter -->
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    <div class="container">
-      <div class="cookie-text">
-        Мы используем cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="politika.html">политикой конфиденциальности</a>.
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Принять</button>
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Отклонить</button>
-      </div>
+  <div class="cookie" id="cookieBanner" role="dialog" aria-label="Использование cookie">
+    <p>Мы используем cookie, чтобы сайт работал удобнее. Подробнее — в <a href="politika.html">политике конфиденциальности</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn--sm btn--light" data-cookie="accept">Принять</button>
+      <button class="btn btn--sm btn--outline-light" data-cookie="decline">Отклонить</button>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.jpg" alt="VIREO логотип" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\"logo-text\">VIREO<span>™</span></span>'">
-      </a>
-
-      <nav class="nav">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="VIREO — на главную"><img src="img/logo.jpg" alt="VIREO"></a>
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
         <a href="apparaty.html">Аппараты</a>
         <a href="o-kompanii.html">О компании</a>
-        <a href="instruktsii.html" style="color:#5EC4B6;">Инструкции</a>
+        <a href="instruktsii.html" class="is-active">Инструкции</a>
         <a href="preparaty.html">Препараты</a>
         <a href="kontakty.html">Контакты</a>
       </nav>
-
-      <a href="kontakty.html" class="btn-contact">Связаться</a>
-
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="header-cta" href="kontakty.html">Связаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs">
-    <div class="container">
-      <ol>
-        <li><a href="index.html">Главная</a></li>
-        <li><span>Инструкции</span></li>
-      </ol>
-    </div>
-  </nav>
-
-  <section class="page-header">
-    <div class="container">
-      <h1>Инструкции и материалы</h1>
-      <p class="subtitle">Скачайте инструкции по аппаратам и препаратам VIREO. Документы в формате PDF.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="apparatus">По аппаратам</button>
-        <button class="tab-btn" data-tab="drugs">По препаратам</button>
-      </div>
-
-      <div class="search-box fade-in">
-        <input type="text" placeholder="Поиск по названию документа...">
-      </div>
-
-      <div class="instructions-list" id="instrApparatus">
-        <div class="instr-item fade-in">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по эксплуатации VIREO Light Pro</div>
-            <div class="instr-name" style="font-weight:400;">Аппарат VIREO Light Pro</div>
-          </div>
-          <div class="instr-file">PDF · 2,4 МБ</div>
-          <a href="files/instruction-apparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-        <div class="instr-item fade-in" style="animation-delay:0.1s;">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по эксплуатации VIREO Wave Duo</div>
-            <div class="instr-name" style="font-weight:400;">Аппарат VIREO Wave Duo</div>
-          </div>
-          <div class="instr-file">PDF · 2,1 МБ</div>
-          <a href="files/instruction-apparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-        <div class="instr-item fade-in" style="animation-delay:0.2s;">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по эксплуатации VIREO Mini</div>
-            <div class="instr-name" style="font-weight:400;">Аппарат VIREO Mini</div>
-          </div>
-          <div class="instr-file">PDF · 1,9 МБ</div>
-          <a href="files/instruction-apparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-      </div>
-
-      <div class="instructions-list" id="instrDrugs" style="display:none;">
-        <div class="instr-item fade-in">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по применению VIREO Gel</div>
-            <div class="instr-name" style="font-weight:400;">Препарат VIREO Gel Фотосенсибилизатор</div>
-          </div>
-          <div class="instr-file">PDF · 1,8 МБ</div>
-          <a href="files/instruction-preparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-        <div class="instr-item fade-in" style="animation-delay:0.1s;">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по применению VIREO Solution</div>
-            <div class="instr-name" style="font-weight:400;">Препарат VIREO Solution Раствор</div>
-          </div>
-          <div class="instr-file">PDF · 1,6 МБ</div>
-          <a href="files/instruction-preparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-        <div class="instr-item fade-in" style="animation-delay:0.2s;">
-          <div class="instr-info">
-            <div class="instr-name">Инструкция по применению VIREO Cream</div>
-            <div class="instr-name" style="font-weight:400;">Препарат VIREO Cream Крем</div>
-          </div>
-          <div class="instr-file">PDF · 1,7 МБ</div>
-          <a href="files/instruction-preparat.pdf" class="download-btn" style="padding:8px 16px; font-size:13px; background:#000; color:#fff; border-radius:4px; white-space:nowrap;">Скачать</a>
-        </div>
-      </div>
-
-      <div class="no-results" style="display:none;">
-        Документы по вашему запросу не найдены
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-col">
-        <div class="footer-logo">VIREO<span style="color:#5EC4B6;">™</span></div>
-        <div class="footer-desc">
-          Аппараты и препараты для фотодинамической терапии. Москва, работаем по всей России.<br>
-          Цены не указываются — только информация и фотографии.
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>разделы</h4>
-        <ul>
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <div class="container">
+        <ol>
           <li><a href="index.html">Главная</a></li>
+          <li aria-current="page">Инструкции</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow reveal">Документы</p>
+        <h1 class="reveal">Инструкции и материалы</h1>
+        <p class="lead reveal">Скачайте инструкции по аппаратам и препаратам VIREO. Все документы в формате PDF.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="segmented reveal" role="tablist" aria-label="Разделы инструкций">
+          <button class="is-active" data-tab="apparatus" role="tab" aria-selected="true">По аппаратам</button>
+          <button data-tab="drugs" role="tab" aria-selected="false">По препаратам</button>
+        </div>
+
+        <div class="search reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input type="search" id="docSearch" placeholder="Поиск по названию документа" aria-label="Поиск по документам">
+        </div>
+
+        <div data-panel="apparatus">
+          <div class="doc-list">
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по эксплуатации VIREO Light Pro</div>
+                <div class="doc-meta">Аппарат VIREO Light Pro · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-apparat.pdf" download>Скачать</a>
+            </div>
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по эксплуатации VIREO Wave Duo</div>
+                <div class="doc-meta">Аппарат VIREO Wave Duo · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-apparat.pdf" download>Скачать</a>
+            </div>
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по эксплуатации VIREO Mini</div>
+                <div class="doc-meta">Аппарат VIREO Mini · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-apparat.pdf" download>Скачать</a>
+            </div>
+          </div>
+          <p class="no-results">Документы по вашему запросу не найдены</p>
+        </div>
+
+        <div data-panel="drugs" hidden>
+          <div class="doc-list">
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по применению VIREO Gel</div>
+                <div class="doc-meta">Препарат VIREO Gel · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-preparat.pdf" download>Скачать</a>
+            </div>
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по применению VIREO Solution</div>
+                <div class="doc-meta">Препарат VIREO Solution · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-preparat.pdf" download>Скачать</a>
+            </div>
+            <div class="doc-card reveal">
+              <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+              <div class="doc-info">
+                <div class="doc-name">Инструкция по применению VIREO Cream</div>
+                <div class="doc-meta">Препарат VIREO Cream · PDF · будет добавлена заказчиком</div>
+              </div>
+              <a class="btn btn--sm btn--ghost" href="files/instruction-preparat.pdf" download>Скачать</a>
+            </div>
+          </div>
+          <p class="no-results">Документы по вашему запросу не найдены</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="footer-wordmark" href="index.html">VIREO<sup>™</sup></a>
+        <p>Аппараты и препараты для фотодинамической терапии. Москва — вся Россия. Без цен: только информация и фотографии.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Разделы</h4>
+        <ul>
           <li><a href="apparaty.html">Аппараты</a></li>
           <li><a href="preparaty.html">Препараты</a></li>
           <li><a href="instruktsii.html">Инструкции</a></li>
@@ -161,53 +147,28 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>контакты</h4>
+        <h4>Контакты</h4>
         <ul>
           <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
           <li><a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
-          <li>г. Москва, работаем по всей России</li>
+          <li>Москва, работаем по всей России</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>соцсети</h4>
+        <h4>Соцсети</h4>
         <ul>
           <li><a href="https://www.instagram.com/fdt_vireo" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://t.me/+DcnB9CETJRs0MjUy" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="politika.html">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <span>© 2026 VIREO. Аппараты и препараты для ФДТ.</span>
-      <a href="politika.html" class="policy-link">Политика конфиденциальности</a>
+      <span>Информация на сайте не является публичной офертой.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('cookieAccept')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    document.getElementById('cookieDecline')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    if (localStorage.getItem('vireo_cookie_accepted')) {
-      document.querySelector('.cookie-banner').style.display = 'none';
-    }
-
-    // Tabs
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const tab = btn.getAttribute('data-tab');
-        document.getElementById('instrApparatus').style.display = tab === 'apparatus' ? 'block' : 'none';
-        document.getElementById('instrDrugs').style.display = tab === 'drugs' ? 'block' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>
-

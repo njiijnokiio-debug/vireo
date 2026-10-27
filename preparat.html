@@ -2,182 +2,168 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VIREO Gel — препарат для ФДТ</title>
-  <meta name="description" content="Препарат VIREO Gel для фотодинамической терапии. Состав, показания, способ применения, инструкция. Цена не указывается.">
+  <meta name="description" content="Препарат VIREO Gel для фотодинамической терапии: форма выпуска, показания, состав, способ применения и инструкция. Цена не указывается.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='16' font-size='24'%3E🌿%3C/text%3E%3C/svg%3E">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <link rel="icon" href="img/logo.jpg">
 </head>
 <body>
 
-  <!-- Yandex Metrika placeholder -->
-  <!-- Yandex.Metrika counter -->
-  <!-- /Yandex.Metrika counter -->
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner">
-    <div class="container">
-      <div class="cookie-text">
-        Мы используем cookie для улучшения работы сайта. Продолжая пользоваться сайтом, вы соглашаетесь с нашей <a href="politika.html">политикой конфиденциальности</a>.
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Принять</button>
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Отклонить</button>
-      </div>
+  <div class="cookie" id="cookieBanner" role="dialog" aria-label="Использование cookie">
+    <p>Мы используем cookie, чтобы сайт работал удобнее. Подробнее — в <a href="politika.html">политике конфиденциальности</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn--sm btn--light" data-cookie="accept">Принять</button>
+      <button class="btn btn--sm btn--outline-light" data-cookie="decline">Отклонить</button>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.jpg" alt="VIREO логотип" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\"logo-text\">VIREO<span>™</span></span>'">
-      </a>
-
-      <nav class="nav">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="VIREO — на главную"><img src="img/logo.jpg" alt="VIREO"></a>
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
         <a href="apparaty.html">Аппараты</a>
         <a href="o-kompanii.html">О компании</a>
         <a href="instruktsii.html">Инструкции</a>
-        <a href="preparaty.html">Препараты</a>
+        <a href="preparaty.html" class="is-active">Препараты</a>
         <a href="kontakty.html">Контакты</a>
       </nav>
-
-      <a href="kontakty.html" class="btn-contact">Связаться</a>
-
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="header-cta" href="kontakty.html">Связаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Breadcrumbs -->
-  <nav class="breadcrumbs">
-    <div class="container">
-      <ol>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="preparaty.html">Препараты</a></li>
-        <li><span>VIREO Gel Фотосенсибилизатор</span></li>
-      </ol>
-    </div>
-  </nav>
-
-  <section class="page-header">
-    <div class="container">
-      <h1>VIREO Gel Фотосенсибилизатор</h1>
-      <p class="subtitle">Препарат для фотодинамической терапии. Состав, показания, способ применения. Цена не указывается.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="detail-gallery fade-in">
-        <div class="main-image">
-          <img src="img/preparat-1.svg" alt="Препарат VIREO Gel упаковка" id="mainImg" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"card-placeholder\">Основное фото скоро будет добавлено</div>'">
-        </div>
-        <div class="thumb-grid">
-          <div class="thumb active" onclick="setMainImage(this, 'img/preparat-1.svg')">
-            <img src="img/preparat-1.svg" alt="Упаковка" onerror="this.style.display='none'; this.parentElement.innerHTML='Фото'">
-          </div>
-          <div class="thumb" onclick="setMainImage(this, 'img/preparat-1.svg')">
-            <img src="img/preparat-1.svg" alt="Туба крупным планом" onerror="this.style.display='none'; this.parentElement.innerHTML='Фото'">
-          </div>
-          <div class="thumb" onclick="setMainImage(this, 'img/preparat-1.svg')">
-            <img src="img/preparat-1.svg" alt="Дозатор" onerror="this.style.display='none'; this.parentElement.innerHTML='Фото'">
-          </div>
-        </div>
-      </div>
-
-      <div class="detail-content fade-in" style="animation-delay: 0.1s;">
-        <h2>VIREO Gel Фотосенсибилизатор</h2>
-        <p class="detail-meta">Форма выпуска: тюбик 15 мл · Категория: препарат для ФДТ</p>
-
-        <p class="detail-desc">
-          Фотосенсибилизатор в форме геля для проведения процедур фотодинамической терапии. Применяется в комплексе с аппаратами VIREO для работы с кожей лица и тела.
-        </p>
-
-        <div class="detail-section">
-          <h3>назначение и показания</h3>
-          <ul style="list-style:disc; padding-left:20px; color:#333; line-height:1.7; max-width:600px;">
-            <li>Подготовка кожи к фототерапевтическим процедурам</li>
-            <li>Комплексное использование с аппаратами VIREO</li>
-            <li>Косметологические процедуры по показаниям врача</li>
-          </ul>
-        </div>
-
-        <div class="detail-section">
-          <h3>состав</h3>
-          <ul style="list-style:disc; padding-left:20px; color:#333; line-height:1.7; max-width:600px;">
-            <li>Активные компоненты — уточняются у заказчика (заглушка)</li>
-            <li>Вспомогательные вещества — уточняются у заказчика (заглушка)</li>
-          </ul>
-          <p style="font-size:13px; color:#888; margin-top:12px; font-style:italic;">Полный состав предоставляется заказчиком и размещается в инструкции.</p>
-        </div>
-
-        <div class="detail-section">
-          <h3>способ применения</h3>
-          <p style="color:#333; line-height:1.7; max-width:600px;">
-            Наносится на обрабатываемую зону перед процедурой на аппарате VIREO. Точная схема применения и дозировки уточняются у лечащего врача. Дозировки не указываются на сайте без подтверждения заказчика.
-          </p>
-        </div>
-
-        <div class="detail-section">
-          <h3>противопоказания</h3>
-          <ul style="list-style:disc; padding-left:20px; color:#333; line-height:1.7; max-width:600px;">
-            <li>Индивидуальная непереносимость компонентов (заглушка)</li>
-            <li>Беременность и период лактации (заглушка)</li>
-            <li>Острые воспалительные процессы на коже (заглушка)</li>
-          </ul>
-          <p style="font-size:13px; color:#888; margin-top:12px; font-style:italic;">Полный список противопоказаний предоставляется заказчиком.</p>
-        </div>
-
-        <div class="detail-section">
-          <h3>условия хранения</h3>
-          <p style="color:#333; line-height:1.7; max-width:600px;">
-            Хранить в сухом месте при комнатной температуре, защищенном от прямого солнечного света. Точные условия уточняются у заказчика (заглушка).
-          </p>
-        </div>
-
-        <div class="detail-section">
-          <h3>производитель</h3>
-          <p style="color:#333; line-height:1.7; max-width:600px;">
-            VIREO — Россия. Производитель и сертификаты уточняются у заказчика (заглушка).
-          </p>
-        </div>
-
-        <div class="detail-section">
-          <h3>инструкция</h3>
-          <div class="download-card">
-            <div class="download-info">
-              <div class="download-name">Инструкция по применению VIREO Gel</div>
-              <div class="download-size">PDF · 1,8 МБ</div>
-            </div>
-            <a href="files/instruction-preparat.pdf" class="download-btn" download>Скачать</a>
-          </div>
-          <p style="font-size:13px; color:#888; margin-top:8px;">Файл инструкции будет добавлен заказчиком.</p>
-        </div>
-
-        <a href="kontakty.html" class="btn-consultation fade-in" style="animation-delay: 0.2s;">
-          Получить консультацию
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-col">
-        <div class="footer-logo">VIREO<span style="color:#5EC4B6;">™</span></div>
-        <div class="footer-desc">
-          Аппараты и препараты для фотодинамической терапии. Москва, работаем по всей России.<br>
-          Цены не указываются — только информация и фотографии.
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>разделы</h4>
-        <ul>
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <div class="container">
+        <ol>
           <li><a href="index.html">Главная</a></li>
+          <li><a href="preparaty.html">Препараты</a></li>
+          <li aria-current="page">VIREO Gel</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="detail-hero">
+      <div class="container detail-layout">
+        <div class="reveal">
+          <div class="gallery-main">
+            <img id="galleryMain" src="img/preparat-1.svg" alt="Препарат VIREO Gel — упаковка" style="transition:opacity .2s ease">
+          </div>
+          <div class="gallery-thumbs">
+            <button class="gallery-thumb is-active" data-src="img/preparat-1.svg" aria-label="Фото 1"><img src="img/preparat-1.svg" alt="VIREO Gel — упаковка" loading="lazy"></button>
+            <button class="gallery-thumb" data-src="img/preparat-1.svg" aria-label="Фото 2"><img src="img/preparat-1.svg" alt="VIREO Gel — туба" loading="lazy"></button>
+            <button class="gallery-thumb" data-src="img/preparat-1.svg" aria-label="Фото 3"><img src="img/preparat-1.svg" alt="VIREO Gel — дозатор" loading="lazy"></button>
+            <button class="gallery-thumb" data-src="img/preparat-1.svg" aria-label="Фото 4"><img src="img/preparat-1.svg" alt="VIREO Gel — деталь" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="detail-summary reveal">
+          <p class="eyebrow">Препарат</p>
+          <h1 style="margin-top:14px">VIREO Gel</h1>
+          <div class="detail-meta">
+            <span>Фотосенсибилизатор</span>
+            <span>Тюбик 15 мл</span>
+          </div>
+          <p class="detail-lead">
+            Фотосенсибилизатор в форме геля для проведения процедур фотодинамической терапии.
+            Применяется в комплексе с аппаратами VIREO для работы с кожей лица и тела.
+          </p>
+          <div class="detail-actions">
+            <a class="btn btn--dark" href="kontakty.html">Получить консультацию
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="files/instruction-preparat.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              Инструкция PDF
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container detail-body">
+        <div class="detail-section reveal">
+          <h2>назначение и показания</h2>
+          <ul class="bullets">
+            <li>Подготовка кожи к фототерапевтическим процедурам.</li>
+            <li>Комплексное использование с аппаратами VIREO.</li>
+            <li>Косметологические процедуры по показаниям врача.</li>
+          </ul>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>состав</h2>
+          <ul class="bullets">
+            <li>Активные компоненты — уточняются у заказчика.</li>
+            <li>Вспомогательные вещества — уточняются у заказчика.</li>
+          </ul>
+          <p class="note">Полный состав предоставляется заказчиком и размещается в инструкции.</p>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>способ применения</h2>
+          <p style="color:var(--ink-2);font-size:15px;line-height:1.7;max-width:640px">
+            Наносится на обрабатываемую зону перед процедурой на аппарате VIREO.
+            Точная схема применения и дозировки уточняются у лечащего врача.
+            Дозировки не указываются на сайте без подтверждения заказчика.
+          </p>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>противопоказания</h2>
+          <ul class="bullets">
+            <li>Индивидуальная непереносимость компонентов.</li>
+            <li>Беременность и период лактации.</li>
+            <li>Острые воспалительные процессы на коже.</li>
+          </ul>
+          <p class="note">Полный список противопоказаний предоставляется заказчиком.</p>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>условия хранения</h2>
+          <p style="color:var(--ink-2);font-size:15px;line-height:1.7;max-width:640px">
+            Хранить в сухом месте при комнатной температуре, защищённом от прямого солнечного света.
+            Точные условия уточняются у заказчика.
+          </p>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>производитель</h2>
+          <p style="color:var(--ink-2);font-size:15px;line-height:1.7;max-width:640px">
+            VIREO — Россия. Производитель и сертификаты уточняются у заказчика.
+          </p>
+        </div>
+
+        <div class="detail-section reveal">
+          <h2>инструкция</h2>
+          <div class="doc-card">
+            <span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+            <div class="doc-info">
+              <div class="doc-name">Инструкция по применению VIREO Gel</div>
+              <div class="doc-meta">PDF · будет добавлена заказчиком</div>
+            </div>
+            <a class="btn btn--sm btn--ghost" href="files/instruction-preparat.pdf" download>Скачать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="footer-wordmark" href="index.html">VIREO<sup>™</sup></a>
+        <p>Аппараты и препараты для фотодинамической терапии. Москва — вся Россия. Без цен: только информация и фотографии.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Разделы</h4>
+        <ul>
           <li><a href="apparaty.html">Аппараты</a></li>
           <li><a href="preparaty.html">Препараты</a></li>
           <li><a href="instruktsii.html">Инструкции</a></li>
@@ -186,49 +172,28 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>контакты</h4>
+        <h4>Контакты</h4>
         <ul>
           <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
           <li><a href="mailto:karlovserg@mail.ru">karlovserg@mail.ru</a></li>
-          <li>г. Москва, работаем по всей России</li>
+          <li>Москва, работаем по всей России</li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>соцсети</h4>
+        <h4>Соцсети</h4>
         <ul>
           <li><a href="https://www.instagram.com/fdt_vireo" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           <li><a href="https://t.me/+DcnB9CETJRs0MjUy" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+          <li><a href="politika.html">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <span>© 2026 VIREO. Аппараты и препараты для ФДТ.</span>
-      <a href="politika.html" class="policy-link">Политика конфиденциальности</a>
+      <span>Информация на сайте не является публичной офертой.</span>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('cookieAccept')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    document.getElementById('cookieDecline')?.addEventListener('click', function() {
-      document.querySelector('.cookie-banner').style.display = 'none';
-      localStorage.setItem('vireo_cookie_accepted', 'true');
-    });
-    if (localStorage.getItem('vireo_cookie_accepted')) {
-      document.querySelector('.cookie-banner').style.display = 'none';
-    }
-
-    function setMainImage(thumbEl, src) {
-      const mainImg = document.getElementById('mainImg');
-      const thumbs = document.querySelectorAll('.thumb');
-      thumbs.forEach(t => t.classList.remove('active'));
-      thumbEl.classList.add('active');
-      if (mainImg) mainImg.src = src;
-    }
-  </script>
 </body>
 </html>
-
