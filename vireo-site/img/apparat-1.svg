@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0efeb" rx="8"/>
+  <circle cx="200" cy="140" r="90" fill="#e0ded8" stroke="#d3d2cb" stroke-width="2"/>
+  <circle cx="200" cy="140" r="55" fill="none" stroke="#5EC4B6" stroke-width="3" stroke-dasharray="40 15"/>
+  <rect x="170" y="230" width="60" height="40" fill="#e0ded8" rx="4"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">VIREO Light Pro</text>
+  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+</svg>

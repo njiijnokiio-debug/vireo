@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /files/
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://vireo.ru/sitemap.xml

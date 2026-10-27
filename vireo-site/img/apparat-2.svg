@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0efeb" rx="8"/>
+  <rect x="130" y="90" width="140" height="120" fill="#e0ded8" rx="8" stroke="#d3d2cb" stroke-width="2"/>
+  <rect x="160" y="120" width="80" height="30" fill="#d3d2cb" rx="4"/>
+  <circle cx="200" cy="180" r="20" fill="#5EC4B6" opacity="0.6"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">VIREO Wave Duo</text>
+  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+</svg>

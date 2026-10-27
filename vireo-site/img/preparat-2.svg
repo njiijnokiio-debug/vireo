@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0efeb" rx="8"/>
+  <path d="M190 90 L190 210 Q190 240 210 240 L230 240 Q250 240 250 210 L250 90 Z" fill="#e0ded8" stroke="#d3d2cb" stroke-width="2"/>
+  <rect x="195" y="110" width="20" height="6" fill="#5EC4B6" rx="2"/>
+  <rect x="195" y="125" width="20" height="3" fill="#d3d2cb" rx="1"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">VIREO Solution</text>
+  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+</svg>

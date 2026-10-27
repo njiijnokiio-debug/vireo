@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0efeb" rx="8"/>
+  <path d="M180 100 Q200 60 220 100 L220 220 Q200 260 180 220 Z" fill="#e0ded8" stroke="#d3d2cb" stroke-width="2"/>
+  <rect x="185" y="120" width="30" height="8" fill="#5EC4B6" rx="2"/>
+  <rect x="185" y="135" width="30" height="4" fill="#d3d2cb" rx="2"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">VIREO Gel</text>
+  <text x="50%" y="70%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+</svg>

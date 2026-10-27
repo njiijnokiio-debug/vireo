@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f0efeb" rx="8"/>
+  <circle cx="300" cy="200" r="130" fill="#e0ded8" stroke="#d3d2cb" stroke-width="2"/>
+  <path d="M240 260 Q300 220 360 260" fill="none" stroke="#5EC4B6" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="300" cy="200" r="16" fill="#5EC4B6" opacity="0.8"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle" dominant-baseline="middle">Аппарат ФДТ VIREO</text>
+  <text x="50%" y="65%" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle" dominant-baseline="middle">Фото скоро будет добавлено</text>
+</svg>
