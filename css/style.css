@@ -1032,17 +1032,6 @@ h1,h2,h3,h4{
 .doc-info{flex:1;min-width:0}
 .doc-name{font-size:15px;line-height:1.4}
 .doc-meta{margin-top:4px;font-size:12.5px;color:var(--muted)}
-.docs-note{
-  margin-top:22px;
-  padding:16px 20px;
-  border:1px solid var(--line);
-  border-left:2px solid var(--accent);
-  border-radius:0 var(--radius-sm) var(--radius-sm) 0;
-  background:var(--bg-2);
-  font-size:13px;
-  line-height:1.6;
-  color:var(--ink-2);
-}
 
 /* ---------- Instructions ---------- */
 .segmented{
