@@ -89,10 +89,6 @@ h1,h2,h3,h4{
   flex:none;
 }
 .eyebrow--center{justify-content:center}
-.eyebrow-tail{white-space:pre}
-@media (max-width:520px){
-  .eyebrow-tail{display:none}
-}
 .lead{color:var(--muted);font-size:clamp(15px,1.6vw,18px);line-height:1.7}
 
 /* ---------- Buttons ---------- */
@@ -668,7 +664,7 @@ h1,h2,h3,h4{
   display:grid;
   grid-template-columns:1.05fr .95fr;
   gap:clamp(32px,5vw,76px);
-  align-items:start;
+  align-items:center;
 }
 .info-list{margin-top:30px}
 .info-row{
@@ -726,6 +722,8 @@ h1,h2,h3,h4{
 .social-pill:hover{background:var(--ink);border-color:var(--ink);color:#fff}
 
 .contact-card{
+  display:flex;
+  flex-direction:column;
   padding:clamp(24px,3vw,38px);
   background:#fff;
   border:1px solid var(--line);
@@ -738,41 +736,8 @@ h1,h2,h3,h4{
   letter-spacing:0;
 }
 .contact-card p{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.65}
-.map-mini{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  aspect-ratio:16/10;
-  margin-top:20px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:var(--bg-2);
-  overflow:hidden;
-  text-align:center;
-}
-.map-mini::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:linear-gradient(rgba(17,17,17,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.05) 1px,transparent 1px);
-  background-size:38px 38px;
-}
-.map-mini__inner{position:relative;z-index:1;padding:16px}
-.map-pin{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;height:42px;
-  margin:0 auto 10px;
-  border-radius:50%;
-  background:var(--accent);
-  color:#06231f;
-  box-shadow:0 10px 24px -12px rgba(46,156,141,.9);
-}
-.map-pin svg{width:18px;height:18px}
-.map-mini b{display:block;font-family:'Jost',sans-serif;font-weight:500;font-size:14px;letter-spacing:.02em}
-.map-mini small{display:block;margin-top:4px;font-size:12px;color:var(--muted)}
+.contact-card .expert-meta{margin-top:18px}
+.contact-card .cta-row{margin-top:auto;padding-top:28px}
 
 /* ---------- Breadcrumbs / page head ---------- */
 .breadcrumbs{
@@ -1121,37 +1086,8 @@ h1,h2,h3,h4{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:clamp(32px,5vw,72px);
-  align-items:start;
-}
-.map-card{
-  position:relative;
-  display:flex;
   align-items:center;
-  justify-content:center;
-  aspect-ratio:16/11;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  background:var(--bg-2);
-  overflow:hidden;
-  text-align:center;
 }
-.map-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:linear-gradient(rgba(17,17,17,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.05) 1px,transparent 1px);
-  background-size:44px 44px;
-}
-.map-card__inner{position:relative;z-index:1;padding:24px}
-.map-card__inner b{
-  display:block;
-  margin-top:12px;
-  font-family:'Jost',sans-serif;
-  font-weight:500;
-  font-size:17px;
-  letter-spacing:.01em;
-}
-.map-card__inner p{max-width:280px;margin:6px auto 0;color:var(--muted);font-size:13px;line-height:1.6}
 
 /* ---------- Policy ---------- */
 .prose{
@@ -1329,6 +1265,20 @@ h1,h2,h3,h4{
   .advantages{grid-template-columns:1fr 1fr}
   .hero-tiles{grid-template-columns:repeat(2,1fr)}
   .detail-summary{max-width:720px}
+  .expert-card{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    column-gap:26px;
+    align-items:start;
+    max-width:820px;
+    margin:0 auto;
+  }
+  .expert-card img{grid-row:1 / span 4;height:auto;aspect-ratio:1;margin:0}
+  .expert-card h3{margin-top:0}
+}
+
+@media (min-width:901px) and (max-width:1024px){
+  .expert .split{grid-template-columns:1fr 1fr}
 }
 
 @media (max-width:900px){
@@ -1363,12 +1313,16 @@ h1,h2,h3,h4{
   .header-cta{display:none}
   .nav-toggle{display:block;margin-left:auto}
   .brand img{height:30px}
+  .expert .media{max-width:620px;margin:0 auto;width:100%}
 }
 
 @media (max-width:640px){
   .cards-grid,
   .advantages,
   .footer-top{grid-template-columns:1fr}
+  .expert-card{grid-template-columns:1fr;max-width:none}
+  .expert-card img{grid-row:auto;aspect-ratio:16/10;height:auto}
+  .expert-card h3{margin-top:20px}
   .hero-tiles{grid-template-columns:1fr;gap:8px}
   .tile{flex-direction:row;align-items:stretch;min-height:0}
   .tile-media{
