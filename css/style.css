@@ -1457,3 +1457,49 @@ h1,h2,h3,h4{
   .hero-tiles{grid-template-columns:1fr}
   .gallery-thumbs{grid-template-columns:repeat(3,1fr)}
 }
+
+/* ---------- Instructions page: softened contrast ---------- */
+/* Цвета вынесены в переменные и применяются только на странице «Инструкции». */
+.docs-page{
+  --docs-bg:#F7F6F2;
+  --docs-surface:#FCFBF8;
+  --docs-ink:#2B3035;
+  --docs-ink-soft:#3A3F44;
+  --docs-muted:#4C5054;
+  --docs-line:rgba(43,48,53,.14);
+  --docs-icon-bg:#EDEFEA;
+  --docs-shadow:0 3px 12px rgba(43,48,53,.06);
+  background:var(--docs-bg);
+  color:var(--docs-ink);
+}
+.docs-page .lead,
+.docs-page .no-results{color:var(--docs-ink-soft)}
+.docs-page .doc-card{
+  background:var(--docs-surface);
+  border-color:var(--docs-line);
+}
+.docs-page .doc-card:hover{border-color:rgba(46,156,141,.45)}
+.docs-page .doc-icon{
+  background:var(--docs-icon-bg);
+  color:var(--accent-deep);
+}
+.docs-page .doc-name{color:var(--docs-ink)}
+.docs-page .doc-meta{color:var(--docs-muted)}
+.docs-page .segmented{background:var(--docs-surface)}
+.docs-page .segmented button{color:var(--docs-ink-soft)}
+.docs-page .segmented button.is-active{
+  background:var(--docs-bg);
+  color:var(--docs-ink);
+  box-shadow:var(--docs-shadow);
+}
+.docs-page .search svg{color:var(--docs-muted)}
+.docs-page .search input{
+  background:var(--docs-surface);
+  border-color:var(--docs-line);
+  color:var(--docs-ink);
+}
+.docs-page .search input::placeholder{color:var(--docs-muted)}
+.docs-page .btn--dark{
+  background:var(--docs-ink);
+  border-color:var(--docs-ink);
+}
