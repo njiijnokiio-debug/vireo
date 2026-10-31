@@ -1432,7 +1432,7 @@ h1,h2,h3,h4{
     border-right:1px solid var(--line);
   }
   .tile-media img{padding:8px}
-  .tile-media--cover img{padding:0}
+  .tile-media--cover img{padding:0;object-position:left center}
   .tile-body{justify-content:center;gap:3px;padding:14px 46px 14px 16px}
   .tile-title{font-size:18px}
   .tile-desc{max-width:none;font-size:12px;line-height:1.4}
