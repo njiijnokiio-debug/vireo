@@ -174,20 +174,28 @@
   }
 
   /* ---------- Tabs ---------- */
+  function activatePanel(id, resetSearch) {
+    $$('.segmented [data-tab]').forEach(function (b) {
+      var on = b.getAttribute('data-tab') === id;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    $$('[data-panel]').forEach(function (panel) {
+      panel.hidden = panel.getAttribute('data-panel') !== id;
+    });
+    if (resetSearch) {
+      var input = $('#docSearch');
+      if (input) { input.value = ''; filterDocs(''); }
+    }
+  }
+
   function initTabs() {
     var buttons = $$('.segmented [data-tab]');
     if (!buttons.length) return;
 
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        buttons.forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-        var id = btn.getAttribute('data-tab');
-        $$('[data-panel]').forEach(function (panel) {
-          panel.hidden = panel.getAttribute('data-panel') !== id;
-        });
-        var input = $('#docSearch');
-        if (input) { input.value = ''; filterDocs(''); }
+        activatePanel(btn.getAttribute('data-tab'), true);
       });
     });
   }
@@ -195,15 +203,37 @@
   /* ---------- Document search ---------- */
   function filterDocs(query) {
     var q = query.toLowerCase().trim();
+    var counts = {};
+    var total = 0;
+
     $$('.doc-list').forEach(function (list) {
+      var panel = list.closest('[data-panel]');
+      var key = panel ? panel.getAttribute('data-panel') : 'all';
       var visible = 0;
       $$('.doc-card', list).forEach(function (row) {
         var match = row.textContent.toLowerCase().indexOf(q) !== -1;
         row.style.display = match ? '' : 'none';
         if (match) visible++;
       });
-      var empty = $('.no-results', list.parentElement);
-      if (empty) empty.style.display = visible === 0 && q ? 'block' : 'none';
+      counts[key] = (counts[key] || 0) + visible;
+      total += visible;
+    });
+
+    /* Если совпадения только во второй вкладке — переключаемся на неё */
+    if (q) {
+      var active = $('.segmented [data-tab].is-active');
+      var activeId = active ? active.getAttribute('data-tab') : null;
+      if (activeId && !counts[activeId] && total > 0) {
+        Object.keys(counts).forEach(function (id) {
+          if (counts[id] > 0 && id !== 'all') activatePanel(id, false);
+        });
+      }
+    }
+
+    $$('[data-panel]').forEach(function (panel) {
+      var empty = $('.no-results', panel);
+      if (!empty) return;
+      empty.style.display = q && total === 0 && !panel.hidden ? 'block' : 'none';
     });
   }
 
