@@ -5,4 +5,4 @@ Disallow: /files/
 Disallow: /js/
 Disallow: /css/
 
-Sitemap: https://vireo.ru/sitemap.xml
+Sitemap: https://njiijnokiokiio-debug.github.io/vireo/sitemap.xml
