@@ -9,7 +9,7 @@
 - Адаптивная вёрстка, проверена на 1440, 768 и 390 px
 - Бургер-меню, хлебные крошки, фиксированная шапка, кнопка «наверх», cookie-баннер
 - На главной: первый экран с фото-плитками (аппараты, клиника, препараты, инструкции) и фото процедуры в блоке «Что такое ФДТ»
-- Карточки товаров с фотографиями из каталога; для части новых позиций временно стоят плейсхолдеры «фото скоро»
+- Карточки товаров с фотографиями из каталога; все 8 препаратов — с реальными фото упаковок
 - Вкладки и поиск по инструкциям; все 13 документов доступны для скачивания в PDF
 - Контакты оформлены тёмной карточкой «Напишите нам» с крупными кнопками Telegram и Instagram
 - Соцсети (Instagram, Telegram) открываются в новой вкладке
@@ -32,7 +32,7 @@
 
 ## 2. Фото аппаратов и препаратов
 
-Фотографии взяты из каталога `VIREO_katalog.pdf` и с официального сайта производителя `alslife.ru`. Все файлы обрезаны, приведены к единому квадратному формату и сжаты без заметной потери качества:
+Фотографии препаратов взяты с Яндекс.Диска клиентки (папка «Обучение и презентации» → «Фото» → «Аппараты и флаконы» → «Флаконы», оригиналы 4805×3205). Все файлы приведены к единому квадратному формату 900×900 и сжаты без заметной потери качества. Фото аппаратов — из каталога и с официального сайта производителя `alslife.ru`.
 
 | Файл | Что на фото |
 |------|-------------|
@@ -41,21 +41,21 @@
 | `img/pad-led.jpg` | VIREO PAD LED — три световые секции |
 | `img/arc-led.jpg` | VIREO ARC LED (Arc Led Multi) — переносной аппарат |
 | `img/dental-led.jpg` | VIREO DENTAL LED — капа для стоматологии |
-| `img/preparat-skin.jpg` | VIREO SKIN — биогель |
-| `img/preparat-skin-active.jpg` | VIREO SKIN ACTIVE — биогель |
-| `img/preparat-super-active.jpg` | VIREO SKIN SUPER ACTIVE — временный плейсхолдер |
-| `img/preparat-head.jpg` | VIREO HEAD — биогель |
-| `img/preparat-oral.jpg` | VIREO ORAL — временный плейсхолдер |
-| `img/preparat-dental.jpg` | VIREO DENTAL — временный плейсхолдер |
-| `img/preparat-cleaner.jpg` | VIREO CLEANER — гель для очищения |
-| `img/preparat-calm.jpg` | VIREO CALM — гель постпроцедурный |
+| `img/preparat-skin.jpg` | VIREO SKIN — биогель 30 мл |
+| `img/preparat-skin-active.jpg` | VIREO SKIN ACTIVE — биогель 30 мл |
+| `img/preparat-skin-mix.jpg` | VIREO SKIN MIX — биогель 30 мл |
+| `img/preparat-skin-universal.jpg` | VIREO SKIN UNIVERSAL — биогель 30 мл |
+| `img/preparat-head.jpg` | VIREO HEAD — спрей 50 мл |
+| `img/preparat-nail-universal.jpg` | VIREO NAIL UNIVERSAL — гель 30 мл |
+| `img/preparat-cleaner.jpg` | VIREO CLEANER — гель для очищения 100 мл |
+| `img/preparat-calm.jpg` | VIREO CALM — гель постпроцедурный 30 мл |
 | `img/notebook.jpg` | Блокнот — блок «О компании» |
 | `img/fdt-specialist.jpg` | Процедура ФДТ — блок «Что такое ФДТ» на главной |
 | `img/clinical-approach.jpg` | Косметологическая процедура в клинике |
 | `img/tile-doctor.jpg` | Плитка «О компании» на главной |
 | `img/logo.jpg` | Логотип VIREO |
 
-Для VIREO SKIN SUPER ACTIVE, VIREO ORAL и VIREO DENTAL фото пока нет ни в каталоге, ни на сайте производителя — стоят аккуратные плейсхолдеры. Пришлите фотографии, и я заменю файлы с теми же именами: пути в HTML менять не нужно.
+Каталог приведён к линейке из материалов клиентки (февраль 2026): SKIN, SKIN ACTIVE, SKIN MIX, SKIN UNIVERSAL, HEAD, NAIL UNIVERSAL, CLEANER, CALM. Все 8 позиций с реальными фотографиями — плейсхолдеров нет.
 
 Чтобы заменить любое фото, положите новый файл с тем же именем в `img/`. Рекомендуемый формат: JPG или WebP, от 900 px по длинной стороне.
 
@@ -74,14 +74,14 @@
 | `files/vireo-dental-led.pdf` | VIREO DENTAL LED — руководство по эксплуатации |
 | `files/vireo-skin.pdf` | VIREO SKIN — инструкция по применению |
 | `files/vireo-skin-active.pdf` | VIREO SKIN ACTIVE — инструкция по применению |
-| `files/vireo-skin-super-active.pdf` | VIREO SKIN SUPER ACTIVE — инструкция по применению |
+| `files/vireo-skin-mix.pdf` | VIREO SKIN MIX — инструкция по применению |
+| `files/vireo-skin-universal.pdf` | VIREO SKIN UNIVERSAL — инструкция по применению |
 | `files/vireo-head.pdf` | VIREO HEAD — инструкция по применению |
-| `files/vireo-oral.pdf` | VIREO ORAL — инструкция по применению |
-| `files/vireo-dental.pdf` | VIREO DENTAL — инструкция по применению |
+| `files/vireo-nail-universal.pdf` | VIREO NAIL UNIVERSAL — инструкция по применению |
 | `files/vireo-cleaner.pdf` | VIREO CLEANER — инструкция по применению |
 | `files/vireo-calm.pdf` | VIREO CALM — инструкция по применению |
 
-Для VIREO SKIN ACTIVE, VIREO HEAD и VIREO CALM сохранён текст официальных PDF предыдущей версии сайта; документы пересобраны с актуальным e-mail. Остальные 10 документов подготовлены на основе данных каталога и сайта. Когда производитель пришлёт официальные PDF, положите их в `files/` с теми же именами — ссылки на сайте менять не нужно.
+Все 8 инструкций по препаратам пересобраны по документу клиентки «Препараты VIREO февраль 2026»: состав, показания, действие и совместимость со светом указаны по первоисточнику. Официальные PDF от производителя по этим позициям пока не переданы — когда пришлют, положите их в `files/` с теми же именами, ссылки на сайте менять не нужно.
 
 ## 4. Контактные данные
 
